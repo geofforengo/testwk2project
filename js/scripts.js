@@ -12,31 +12,46 @@ $(document).ready(function() {
     var frustrate = $("input:radio[name=frustrate]:checked").val();
 
     var color = $("input:radio[name=color]:checked").val();
-
-    var result = [];
-    var result1 = [];
-    var result2 = [];
-
-
-    if (animal === "cat" || animal === "dog") {
-      result = ("Ruby")
-    } else if (animal === "walrus") {
-      result = ("C++")
-    } else if (color === "red" || color === "blue") {
-      result1 = ("Swift")
-    } else if (color === "green") {
-      result1 = ("Python")
-    } else if (problem === "yes") {
-      result2 = ("React")
-    } else if (problem === "no") {
-      result2 = ("GO")
-    } else {
-      $("basic").show();
-    }
-
-    var results = [result, result1, result2];
-    console.log(animal, time, problem, frustrate, color);
-    $("#output").append(results);
-
-  });
 });
+    // var result = ();
+    // var result1 = ();
+    // var result2 = ();
+    var results = [];
+
+    console.log(time);
+
+      if (animal === "cat" || animal === "dog") {
+      var result = ("Ruby");
+      results.push(result);
+      }
+      else (animal === "walrus") {
+      var result = ("C++")
+      results.push(result);
+      }
+
+
+      if (time === "morning" || time === "night") {
+      var result1 = ("Swift")
+      results.push(result1);
+      }
+      else (time === "neither") {
+      var result1 = ("Python")
+      results.push(result1);
+      }
+
+
+      if (problem === "yes") {
+      var result2 = ("React")
+      results.push(result2);
+      }
+      else  (problem === "no") {
+      var result2 = ("GO")
+      results.push(result2);
+    }
+      // } else {
+      // $("basic").show();
+    console.log(result1);
+    console.log(result2);
+    console.log(results);
+    $("p#final").append(results);
+  });
